@@ -1,0 +1,9 @@
+# Only mTLS traffic is accepted by pods in the default namespace.
+apiVersion: security.istio.io/v1
+kind: PeerAuthentication
+metadata:
+  name: mtls-mode
+  namespace: default
+spec:
+  mtls:
+    mode: STRICT

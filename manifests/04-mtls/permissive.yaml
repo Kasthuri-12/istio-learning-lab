@@ -1,0 +1,9 @@
+# Accept both plain-text and mTLS traffic (Istio's default behaviour).
+apiVersion: security.istio.io/v1
+kind: PeerAuthentication
+metadata:
+  name: mtls-mode
+  namespace: default
+spec:
+  mtls:
+    mode: PERMISSIVE
