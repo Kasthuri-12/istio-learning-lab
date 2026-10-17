@@ -1,0 +1,22 @@
+# Cut off slow reviews v2 calls after 0.5s instead of waiting on a slow dependency.
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: reviews
+spec:
+  hosts:
+  - reviews
+  http:
+  - match:
+    - headers:
+        end-user:
+          exact: jason
+    timeout: 0.5s
+    route:
+    - destination:
+        host: reviews
+        subset: v2
+  - route:
+    - destination:
+        host: reviews
+        subset: v1
