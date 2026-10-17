@@ -1,0 +1,10 @@
+This repository builds on the following work:
+
+- iam-veeramalla/istio-guide (https://github.com/iam-veeramalla/istio-guide), Apache License 2.0.
+  The admission controller examples in manifests/00-admission-controllers and the
+  routing, traffic-shifting and mTLS concepts follow that guide. The manifests were
+  rewritten here with current Istio API versions.
+
+- Istio Bookinfo sample (https://github.com/istio/istio/tree/master/samples/bookinfo),
+  Apache License 2.0, Copyright Istio Authors.
+  The files in manifests/01-bookinfo are unmodified copies from the release-1.31 branch.
